@@ -1,27 +1,27 @@
 //
 //  main.c
-//  09_P2(2)
+//  09_P3(1)
 //
 //  Created by ok sojoung on 2023/11/03.
 //
 
 #include <stdio.h>
+#include <stdlib.h>
 #define SIZE 5
 
 int main(void)
 {
-    int i, average;
-    int sum;
+    int i;
     int grade[SIZE];
+    int score[SIZE];
     
-    sum = 0;
     for(i=0; i<SIZE; i++)
-    {
-        printf("학생 성적을 입력하세요:");
-        scanf("%d", &grade[i]);
-        sum += grade[i];
-    }
-    average = sum/SIZE;
-    printf("성적 평균: %d\n", average);
+        grade[i] = rand()%100;
+    for(i=0; i<SIZE; i++)
+        score[i]=grade[i];
+    for(i=0; i<SIZE; i++)
+        printf("score[%d] = %d\n", i ,score[i]);
+    
     return 0;
+    
 }
